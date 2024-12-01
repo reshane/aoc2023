@@ -10,6 +10,7 @@ mod day6;
 mod day7;
 mod day8;
 mod day9;
+mod day10;
 
 
 fn main() {
@@ -69,14 +70,20 @@ fn main() {
                 println!("{}", day9::solve_p1(contents.clone()));
                 println!("{}", day9::solve_p2(contents));
             },
+            10 => {
+                let contents = fs::read_to_string("day10_input.txt")
+                    .expect("Should have the input to solve the problem");
+                println!("{}", day10::solve_p1(contents.clone()));
+                println!("{}", day10::solve_p2(contents));
+            },
             _ => {
                 panic!("Solution for specified day does not exist");
             }
         }
     } else if args.len() == 1 {
         // the day we're working on now
-        println!("Day 10!");
-        let contents = fs::read_to_string("day10_input.txt")
+        println!("Day 11!");
+        let contents = fs::read_to_string("day11_input.txt")
             .expect("Should have the input to solve the problem");
         println!("{}", solve_p1(contents.clone()));
         println!("{}", solve_p2(contents));
@@ -96,6 +103,7 @@ fn test_case_1() {
         "",
     ];
     let result = solve_p1(input.join("\n"));
+    println!("{result}");
     assert!(result == 0);
 }
 
@@ -109,5 +117,6 @@ fn test_case_2() {
         "",
     ];
     let result = solve_p2(input.join("\n"));
+    println!("{result}");
     assert!(result == 0);
 }
