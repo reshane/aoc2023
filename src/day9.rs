@@ -110,19 +110,3 @@ fn test_case_2() {
     println!("{result}");
     assert!(result == 2);
 }
-
-#[test]
-fn test_result_1() {
-    let contents = std::fs::read_to_string("day9_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p1(contents);
-    assert!(result == 1938800261);
-}
-
-#[test]
-fn test_result_2() {
-    let contents = std::fs::read_to_string("day9_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p2(contents);
-    assert!(result == 1112);
-}

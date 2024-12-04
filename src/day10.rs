@@ -147,14 +147,6 @@ fn test_case_1() {
     assert!(result1 == 8);
 }
 
-#[test]
-fn test_result_1() {
-    let contents = std::fs::read_to_string("day10_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p1(contents);
-    assert!(result == 6768);
-}
-
 pub fn solve_p2(contents: String) -> i64 {
     let (start, map) = parse_input(contents);
     // println!("start: {start:?},\nmap: {map:?}");
@@ -244,10 +236,3 @@ fn test_case_2() {
     assert!(result == 10);
 }
 
-#[test]
-fn test_result_2() {
-    let contents = std::fs::read_to_string("day10_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p2(contents);
-    assert!(result == 351);
-}

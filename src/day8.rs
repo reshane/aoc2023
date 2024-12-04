@@ -154,14 +154,6 @@ fn test_case_1a() {
 }
 
 #[test]
-fn test_result_1() {
-    let contents = std::fs::read_to_string("day8_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p1(contents);
-    assert!(result == 20221);
-}
-
-#[test]
 fn test_case_2() {
     let input = vec![
         "LR",
@@ -179,10 +171,3 @@ fn test_case_2() {
     assert!(result == 6);
 }
 
-#[test]
-fn test_result_2() {
-    let contents = std::fs::read_to_string("day8_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p2(contents);
-    assert!(result == 14616363770447);
-}

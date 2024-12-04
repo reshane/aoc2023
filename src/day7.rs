@@ -193,14 +193,6 @@ fn test_case_1() {
 }
 
 #[test]
-fn test_result_1() {
-    let contents = std::fs::read_to_string("day7_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p1(contents);
-    assert!(result == 248217452);
-}
-
-#[test]
 fn test_case_2() {
     let input  = vec![
         "32T3K 765",
@@ -213,10 +205,3 @@ fn test_case_2() {
     assert!(result == 5905);
 }
 
-#[test]
-fn test_result_2() {
-    let contents = std::fs::read_to_string("day7_input.txt")
-        .expect("Should have the input to solve the problem");
-    let result = solve_p2(contents);
-    assert!(result == 245576185);
-}

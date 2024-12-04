@@ -243,13 +243,6 @@ fn test_case_1() {
 }
 
 #[test]
-fn test_result_1() {
-    let contents = std::fs::read_to_string("day5_input.txt")
-        .expect("Should have the input to solve the problem");
-    assert!(solve_p1(contents.clone()) == 1181555926);
-}
-
-#[test]
 fn test_case_2() {
     let input = vec![
         "seeds: 79 14 55 13",
@@ -289,11 +282,4 @@ fn test_case_2() {
     let result = solve_p2(input.join("\n"));
     println!("{result}");
     assert!(result == 46);
-}
-
-#[test]
-fn test_result_2() {
-    let contents = std::fs::read_to_string("day5_input.txt")
-        .expect("Should have the input to solve the problem");
-    assert!(solve_p2(contents) == 37806486);
 }

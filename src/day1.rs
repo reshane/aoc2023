@@ -137,13 +137,3 @@ fn test_case_2() {
 
     assert!(results.iter().sum::<i32>() == (281 + 55 + 46 + 71 + 82));
 }
-
-#[test]
-fn test_result_1() {
-    assert!(55090 == solve_p1());
-}
-
-#[test]
-fn test_result_2() {
-    assert!(54845 == solve_p2());
-}

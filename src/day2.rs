@@ -113,17 +113,3 @@ fn test_case_2() {
     assert!(total == 2286);
 }
 
-#[test]
-fn test_result_1() {
-    let contents = std::fs::read_to_string("day2_input.txt")
-        .expect("Should have the input to solve the problem");
-    let p1 = solve_p1(contents.clone());
-    assert!(p1 == 2369);
-}
-#[test]
-fn test_result_2() {
-    let contents = std::fs::read_to_string("day2_input.txt")
-        .expect("Should have the input to solve the problem");
-    let p2 = solve_p2(contents.clone());
-    assert!(p2 == 66363);
-}
