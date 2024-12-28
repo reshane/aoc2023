@@ -13,6 +13,7 @@ mod day9;
 mod day10;
 mod day11;
 mod day12;
+mod day13;
 
 
 fn main() {
@@ -90,14 +91,20 @@ fn main() {
                 println!("{}", day12::solve_p1(contents.clone()));
                 println!("{}", day12::solve_p2(contents));
             },
+            13 => {
+                let contents = fs::read_to_string("day13_input.txt")
+                    .expect("Should have the input to solve the problem");
+                println!("{}", day13::solve_p1(contents.clone()));
+                println!("{}", day13::solve_p2(contents));
+            },
             _ => {
                 panic!("Solution for specified day does not exist");
             }
         }
     } else if args.len() == 1 {
         // the day we're working on now
-        println!("Day 13!");
-        let contents = fs::read_to_string("day13_input.txt")
+        println!("Day 14!");
+        let contents = fs::read_to_string("day14_input.txt")
             .expect("Should have the input to solve the problem");
         println!("{}", solve_p1(contents.clone()));
         println!("{}", solve_p2(contents));
@@ -113,6 +120,16 @@ pub fn solve_p1(_contents: String) -> i64 {
 
 #[test]
 fn test_case_1() {
+    let input = vec![
+        "",
+    ];
+    let result = solve_p1(input.join("\n"));
+    println!("{result}");
+    assert!(result == 0);
+}
+
+#[test]
+fn test_case_1b() {
     let input = vec![
         "",
     ];
